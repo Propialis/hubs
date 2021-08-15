@@ -657,7 +657,8 @@ AFRAME.registerComponent("media-video", {
       let geometry;
 
       if (projection === "360-equirectangular") {
-        geometry = new THREE.SphereBufferGeometry(1, 64, 32);
+        //geometry = new THREE.SphereBufferGeometry(1, 64, 32);
+        geometry = new THREE.ConeBufferGeometry(1, 64, 32);
         // invert the geometry on the x-axis so that all of the faces point inward
         geometry.scale(-1, 1, 1);
       } else {
